@@ -109,4 +109,26 @@ footer { text-align: center; padding: 40px 20px; color: #999; font-size: 13px; }
 
 /* Адаптивность */
 @media (max-width: 768px) {
-    .navigation a { margin: 0 10px; font-size
+    .navigation a { margin: 0 10px; font-size: 12px; }
+    .hero { padding: 60px 0; }
+    .hero h1 { font-size: 32px; }
+    .hero .subtitle { font-size: 14px; }
+    section { padding: 40px 0; }
+    section h2 { font-size: 24px; margin-bottom: 30px; }
+    .artwork { margin-bottom: 60px; }
+    .slider { max-width: 100%; }
+    .slider-btn { padding: 8px 12px; font-size: 20px; }
+    .artwork-info h3 { font-size: 20px; }
+    .artwork-info p { font-size: 13px; }
+    .pricing-info { padding: 20px; margin-left: 10px; margin-right: 10px; }
+    .about p { font-size: 15px; padding: 0 10px; }
+    .lang-switch { display: block; margin: 10px 0 0 0; text-align: center; }
+}
+
+@media (max-width: 480px) {
+    .navigation { padding: 15px 0; }
+    .navigation a { margin: 0 5px; font-size: 11px; }
+    .hero h1 { font-size: 28px; }
+    main { padding: 80px 15px 30px; }
+    .slider-btn { padding: 6px 10px; font-size: 18px; }
+}
