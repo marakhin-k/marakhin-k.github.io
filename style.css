@@ -51,42 +51,38 @@ section h2 { font-size: 32px; font-weight: 300; margin-bottom: 40px; letter-spac
     margin: 0 auto 20px;
 }
 
-/* === СЛАЙДЕР (финальная исправленная версия) === */
+/* === СЛАЙДЕР (стабильная версия) === */
 .slider {
     position: relative;
     max-width: 600px;
     margin: 0 auto 20px;
     overflow: hidden;
-    display: flex;
-    align-items: center;
 }
 
 .slider-track {
     display: flex;
     transition: transform 0.4s ease;
+    will-change: transform;
 }
 
 .slider-slide {
     flex: 0 0 100%;
     min-width: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
-.slider-slide {
-    flex: 0 0 100%;
-    min-width: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+.slider-slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 70vh;
+    object-fit: contain;
+    margin: 0 auto;
 }
 
-/* Стрелки НА изображении, по центру по вертикали */
+/* Стрелки */
 .slider-btn {
     position: absolute;
-    top: 35%;
+    top: 50%;
     transform: translateY(-50%);
     background: none;
     border: none;
@@ -104,19 +100,13 @@ section h2 { font-size: 32px; font-weight: 300; margin-bottom: 40px; letter-spac
 .slider-btn:hover { opacity: 1; }
 .slider-prev { left: 10px; }
 .slider-next { right: 10px; }
-}
-.slider-btn:hover { opacity: 1; }
-.slider-prev { left: 10px; }
-.slider-next { right: 10px; }
 
-/* Точки ПОД изображением */
+/* Точки */
 .slider-dots {
     display: flex;
     justify-content: center;
     gap: 8px;
     margin-top: 12px;
-    position: relative;
-    z-index: 5;
 }
 .slider-dot {
     width: 8px;
