@@ -67,9 +67,14 @@ section h2 { font-size: 32px; font-weight: 300; margin-bottom: 40px; letter-spac
     flex-shrink: 0;
 }
 .slider-slide img {
-    width: 100%;
+    width: auto;
+    max-width: 100%;
+    max-height: 70vh;
     height: auto;
     display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
 }
 
 /* Простые чёрные стрелки без фона и рамок */
