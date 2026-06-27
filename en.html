@@ -77,8 +77,8 @@
                         <div class="slider-slide"><img src="images/mermaid.jpg" alt="Undine — artificial stone, 2025"></div>
                         <div class="slider-slide"><img src="images/mermaid_2.jpg" alt="Undine — side view"></div>
                     </div>
-                    <button class="slider-btn slider-prev">‹</button>
-                    <button class="slider-btn slider-next">›</button>
+                    <button class="slider-btn slider-prev" aria-label="Previous slide">‹</button>
+                    <button class="slider-btn slider-next" aria-label="Next slide">›</button>
                     <div class="slider-dots"></div>
                 </div>
                 <div class="artwork-info">
@@ -94,8 +94,8 @@
                         <div class="slider-slide"><img src="images/rebirth.jpg" alt="Rebirth — plaster, 2025"></div>
                         <div class="slider-slide"><img src="images/rebirth_2.jpg" alt="Rebirth — back view"></div>
                     </div>
-                    <button class="slider-btn slider-prev">‹</button>
-                    <button class="slider-btn slider-next">›</button>
+                    <button class="slider-btn slider-prev" aria-label="Previous slide">‹</button>
+                    <button class="slider-btn slider-next" aria-label="Next slide">›</button>
                     <div class="slider-dots"></div>
                 </div>
                 <div class="artwork-info">
@@ -112,8 +112,8 @@
                         <div class="slider-slide"><img src="images/sirena_5.jpg" alt="Siren — top view"></div>
                         <div class="slider-slide"><img src="images/sirena_4.jpg" alt="Siren — detail"></div>
                     </div>
-                    <button class="slider-btn slider-prev">‹</button>
-                    <button class="slider-btn slider-next">›</button>
+                    <button class="slider-btn slider-prev" aria-label="Previous slide">‹</button>
+                    <button class="slider-btn slider-next" aria-label="Next slide">›</button>
                     <div class="slider-dots"></div>
                 </div>
                 <div class="artwork-info">
@@ -146,6 +146,7 @@
                 <div class="artwork-info">
                     <h3>«Monument to WWII Heroes in Belaya Berezka»</h3>
                     <p>Bronze, granite, 2020</p>
+                    <p class="availability">Available / Price on request</p>
                 </div>
             </div>
 
@@ -155,8 +156,8 @@
                         <div class="slider-slide"><img src="images/bipe.jpg" alt="Bagpiper — bronze, 2019"></div>
                         <div class="slider-slide"><img src="images/bipe_2.jpg" alt="Bagpiper — side view"></div>
                     </div>
-                    <button class="slider-btn slider-prev">‹</button>
-                    <button class="slider-btn slider-next">›</button>
+                    <button class="slider-btn slider-prev" aria-label="Previous slide">‹</button>
+                    <button class="slider-btn slider-next" aria-label="Next slide">›</button>
                     <div class="slider-dots"></div>
                 </div>
                 <div class="artwork-info">
@@ -181,8 +182,8 @@
                         <div class="slider-slide"><img src="images/jump.jpg" alt="Dive — bronze, 2017"></div>
                         <div class="slider-slide"><img src="images/jump_blue.jpg" alt="Dive — blue patinated version"></div>
                     </div>
-                    <button class="slider-btn slider-prev">‹</button>
-                    <button class="slider-btn slider-next">›</button>
+                    <button class="slider-btn slider-prev" aria-label="Previous slide">‹</button>
+                    <button class="slider-btn slider-next" aria-label="Next slide">›</button>
                     <div class="slider-dots"></div>
                 </div>
                 <div class="artwork-info">
@@ -198,8 +199,8 @@
                         <div class="slider-slide"><img src="images/sun.jpg" alt="Sun — fiberglass, 2017"></div>
                         <div class="slider-slide"><img src="images/sun_2.jpg" alt="Sun — bottom view"></div>
                     </div>
-                    <button class="slider-btn slider-prev">‹</button>
-                    <button class="slider-btn slider-next">›</button>
+                    <button class="slider-btn slider-prev" aria-label="Previous slide">‹</button>
+                    <button class="slider-btn slider-next" aria-label="Next slide">›</button>
                     <div class="slider-dots"></div>
                 </div>
                 <div class="artwork-info">
@@ -233,8 +234,8 @@
                         <div class="slider-slide"><img src="images/sevastopol.jpg" alt="Sevastopol — plaster, 2016"></div>
                         <div class="slider-slide"><img src="images/sevastopol_2.jpg" alt="Sevastopol — full view"></div>
                     </div>
-                    <button class="slider-btn slider-prev">‹</button>
-                    <button class="slider-btn slider-next">›</button>
+                    <button class="slider-btn slider-prev" aria-label="Previous slide">‹</button>
+                    <button class="slider-btn slider-next" aria-label="Next slide">›</button>
                     <div class="slider-dots"></div>
                 </div>
                 <div class="artwork-info">
@@ -279,42 +280,44 @@
     </footer>
 
     <script>
-    document.querySelectorAll('.slider').forEach(slider => {
-        const track = slider.querySelector('.slider-track');
-        const slides = slider.querySelectorAll('.slider-slide');
-        const dotsContainer = slider.querySelector('.slider-dots');
-        let current = 0;
+    document.querySelectorAll('.slider').forEach(function(slider) {
+        var track = slider.querySelector('.slider-track');
+        var slides = slider.querySelectorAll('.slider-slide');
+        var dotsContainer = slider.querySelector('.slider-dots');
+        var current = 0;
 
-        slides.forEach((_, i) => {
-            const dot = document.createElement('button');
+        slides.forEach(function(_, i) {
+            var dot = document.createElement('button');
             dot.classList.add('slider-dot');
             if (i === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => goTo(i));
+            dot.addEventListener('click', function() { goTo(i); });
             dotsContainer.appendChild(dot);
         });
-        const dots = dotsContainer.querySelectorAll('.slider-dot');
+        var dots = dotsContainer.querySelectorAll('.slider-dot');
 
         function goTo(index) {
             current = index;
-            track.style.transform = `translateX(-${current * 100}%)`;
-            dots.forEach((d, i) => d.classList.toggle('active', i === current));
+            track.style.transform = 'translateX(-' + (current * 100) + '%)';
+            dots.forEach(function(d, i) { d.classList.toggle('active', i === current); });
         }
 
-        slider.querySelector('.slider-prev').addEventListener('click', () => {
+        slider.querySelector('.slider-prev').addEventListener('click', function() {
             goTo(current === 0 ? slides.length - 1 : current - 1);
         });
-        slider.querySelector('.slider-next').addEventListener('click', () => {
+        slider.querySelector('.slider-next').addEventListener('click', function() {
             goTo(current === slides.length - 1 ? 0 : current + 1);
         });
 
-        let startX = 0;
-        track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, {passive: true});
-        track.addEventListener('touchend', e => {
-            const diff = startX - e.changedTouches[0].clientX;
+        var startX = 0;
+        track.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, {passive: true});
+        track.addEventListener('touchend', function(e) {
+            var diff = startX - e.changedTouches[0].clientX;
             if (Math.abs(diff) > 50) {
-                diff > 0
-                    ? goTo(current === slides.length - 1 ? 0 : current + 1)
-                    : goTo(current === 0 ? slides.length - 1 : current - 1);
+                if (diff > 0) {
+                    goTo(current === slides.length - 1 ? 0 : current + 1);
+                } else {
+                    goTo(current === 0 ? slides.length - 1 : current - 1);
+                }
             }
         }, {passive: true});
     });
