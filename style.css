@@ -1,3 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #000;
+    background-color: #fff;
+}
+
+/* Навигация */
+.navigation {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 20px 0;
+    z-index: 1000;
+    text-align: center;
+}
+
+.navigation a {
+    color: #000;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: opacity 0.3s;
+}
+
+.navigation a:hover {
+    opacity: 0.6;
+}
+
 /* Переключатель языков */
 .lang-switch {
     margin-left: 20px;
@@ -16,10 +55,230 @@
     opacity: 0.6;
 }
 
+/* Основной контент */
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 20px 50px;
+}
+
+/* Hero секция */
+.hero {
+    text-align: center;
+    padding: 80px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.hero h1 {
+    font-size: 48px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.hero .subtitle {
+    font-size: 18px;
+    color: #666;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+/* Секции */
+section {
+    padding: 60px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+section h2 {
+    font-size: 32px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+/* О себе */
+.about {
+    text-align: center;
+}
+
+.about p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Галерея работ */
+.artwork {
+    margin-bottom: 80px;
+    text-align: center;
+}
+
+.artwork img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+}
+
+.artwork-info {
+    text-align: center;
+}
+
+.artwork-info h3 {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.artwork-info p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.artwork-info .availability {
+    font-size: 13px;
+    color: #000;
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.artwork-info .availability.sold {
+    color: #999;
+    text-decoration: line-through;
+}
+
+/* Информация о ценах */
+.pricing-info {
+    margin-top: 60px;
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-left: 3px solid #000;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pricing-info p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #333;
+    text-align: left;
+}
+
+/* Контакты */
+.contacts {
+    text-align: center;
+}
+
+.contact-list {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-list p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.contact-list a {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 1px solid #000;
+    transition: opacity 0.3s;
+}
+
+.contact-list a:hover {
+    opacity: 0.6;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    color: #999;
+    font-size: 13px;
+}
+
+/* Адаптивность для мобильных устройств */
 @media (max-width: 768px) {
+    .navigation a {
+        margin: 0 10px;
+        font-size: 12px;
+    }
+    
+    .hero {
+        padding: 60px 0;
+    }
+    
+    .hero h1 {
+        font-size: 32px;
+    }
+    
+    .hero .subtitle {
+        font-size: 14px;
+    }
+    
+    section {
+        padding: 40px 0;
+    }
+    
+    section h2 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    
+    .artwork {
+        margin-bottom: 60px;
+    }
+    
+    .artwork img {
+        max-width: 100%;
+    }
+    
+    .artwork-info h3 {
+        font-size: 20px;
+    }
+    
+    .artwork-info p {
+        font-size: 13px;
+    }
+    
+    .pricing-info {
+        padding: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .about p {
+        font-size: 15px;
+        padding: 0 10px;
+    }
+    
     .lang-switch {
         display: block;
         margin: 10px 0 0 0;
         text-align: center;
     }
 }
+
+@media (max-width: 480px) {
+    .navigation {
+        padding: 15px 0;
+    }
+    
+    .navigation a {
+        margin: 0 5px;
+        font-size: 11px;
+    }
+    
+    .hero h1 {
+        font-size: 28px;
+    }
+    
+   
