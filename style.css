@@ -124,13 +124,6 @@ section h2 { font-size: 32px; font-weight: 300; margin-bottom: 40px; letter-spac
 }
 .slider-dot.active { background: #000; }
 
-@media (max-width: 768px) {
-    .slider { max-width: 100%; }
-    .slider-btn { font-size: 28px; }
-    .slider-prev { left: 5px; }
-    .slider-next { right: 5px; }
-}
-
 /* Информация о работе */
 .artwork-info { text-align: center; }
 .artwork-info h3 { font-size: 24px; font-weight: 400; margin-bottom: 10px; }
@@ -164,7 +157,9 @@ footer { text-align: center; padding: 40px 20px; color: #999; font-size: 13px; }
     section h2 { font-size: 24px; margin-bottom: 30px; }
     .artwork { margin-bottom: 60px; }
     .slider { max-width: 100%; }
-    .slider-btn { font-size: 28px; padding: 8px; }
+    .slider-btn { font-size: 28px; }
+    .slider-prev { left: 5px; }
+    .slider-next { right: 5px; }
     .artwork-info h3 { font-size: 20px; }
     .artwork-info p { font-size: 13px; }
     .pricing-info { padding: 20px; margin-left: 10px; margin-right: 10px; }
@@ -177,5 +172,5 @@ footer { text-align: center; padding: 40px 20px; color: #999; font-size: 13px; }
     .navigation a { margin: 0 5px; font-size: 11px; }
     .hero h1 { font-size: 28px; }
     main { padding: 80px 15px 30px; }
-    .slider-btn { font-size: 24px; padding: 6px; }
+    .slider-btn { font-size: 24px; }
 }
